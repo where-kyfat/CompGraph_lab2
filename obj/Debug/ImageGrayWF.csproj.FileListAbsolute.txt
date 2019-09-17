@@ -1,0 +1,10 @@
+D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\bin\Debug\ImageGrayWF.exe.config
+D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\bin\Debug\ImageGrayWF.exe
+D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\bin\Debug\ImageGrayWF.pdb
+D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\obj\Debug\ImageGrayWF.csprojAssemblyReference.cache
+D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\obj\Debug\ImageGrayWF.Form1.resources
+D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\obj\Debug\ImageGrayWF.Properties.Resources.resources
+D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\obj\Debug\ImageGrayWF.csproj.GenerateResource.cache
+D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\obj\Debug\ImageGrayWF.csproj.CoreCompileInputs.cache
+D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\obj\Debug\ImageGrayWF.exe
+D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\obj\Debug\ImageGrayWF.pdb
