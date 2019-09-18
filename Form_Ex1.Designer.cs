@@ -28,105 +28,182 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ex1));
-            this.pictureBox_Image = new System.Windows.Forms.PictureBox();
-            this.ResetButton = new System.Windows.Forms.Button();
-            this.RGBToGrey1Button = new System.Windows.Forms.Button();
-            this.RGBToGrey2Button = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox_Gist = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gist)).BeginInit();
+            this.pictureBox_Gray1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Gray1Gist = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Gray2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Gray2Gist = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Difference = new System.Windows.Forms.PictureBox();
+            this.pictureBox_OriginImage = new System.Windows.Forms.PictureBox();
+            this.label_OriginImage = new System.Windows.Forms.Label();
+            this.label_Gray1 = new System.Windows.Forms.Label();
+            this.label_Gray1Gist = new System.Windows.Forms.Label();
+            this.label_Gray2 = new System.Windows.Forms.Label();
+            this.label_GrayGist = new System.Windows.Forms.Label();
+            this.label_Difference = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gray1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gray1Gist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gray2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gray2Gist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Difference)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_OriginImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox_Image
+            // pictureBox_Gray1
             // 
-            this.pictureBox_Image.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Image.Image")));
-            this.pictureBox_Image.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox_Image.Name = "pictureBox_Image";
-            this.pictureBox_Image.Size = new System.Drawing.Size(668, 620);
-            this.pictureBox_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_Image.TabIndex = 0;
-            this.pictureBox_Image.TabStop = false;
+            this.pictureBox_Gray1.Location = new System.Drawing.Point(382, 42);
+            this.pictureBox_Gray1.Name = "pictureBox_Gray1";
+            this.pictureBox_Gray1.Size = new System.Drawing.Size(336, 255);
+            this.pictureBox_Gray1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Gray1.TabIndex = 0;
+            this.pictureBox_Gray1.TabStop = false;
             // 
-            // ResetButton
+            // pictureBox_Gray1Gist
             // 
-            this.ResetButton.Location = new System.Drawing.Point(1273, 28);
-            this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(80, 27);
-            this.ResetButton.TabIndex = 1;
-            this.ResetButton.Text = "Reset";
-            this.ResetButton.UseVisualStyleBackColor = true;
-            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            this.pictureBox_Gray1Gist.Location = new System.Drawing.Point(827, 42);
+            this.pictureBox_Gray1Gist.Name = "pictureBox_Gray1Gist";
+            this.pictureBox_Gray1Gist.Size = new System.Drawing.Size(336, 255);
+            this.pictureBox_Gray1Gist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Gray1Gist.TabIndex = 5;
+            this.pictureBox_Gray1Gist.TabStop = false;
             // 
-            // RGBToGrey1Button
+            // pictureBox_Gray2
             // 
-            this.RGBToGrey1Button.Location = new System.Drawing.Point(1273, 244);
-            this.RGBToGrey1Button.Name = "RGBToGrey1Button";
-            this.RGBToGrey1Button.Size = new System.Drawing.Size(86, 23);
-            this.RGBToGrey1Button.TabIndex = 2;
-            this.RGBToGrey1Button.Text = "RGB to Grey1";
-            this.RGBToGrey1Button.UseVisualStyleBackColor = true;
-            this.RGBToGrey1Button.Click += new System.EventHandler(this.RGBToGrey1Button_Click);
+            this.pictureBox_Gray2.Location = new System.Drawing.Point(382, 324);
+            this.pictureBox_Gray2.Name = "pictureBox_Gray2";
+            this.pictureBox_Gray2.Size = new System.Drawing.Size(336, 255);
+            this.pictureBox_Gray2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Gray2.TabIndex = 6;
+            this.pictureBox_Gray2.TabStop = false;
             // 
-            // RGBToGrey2Button
+            // pictureBox_Gray2Gist
             // 
-            this.RGBToGrey2Button.Location = new System.Drawing.Point(1273, 292);
-            this.RGBToGrey2Button.Name = "RGBToGrey2Button";
-            this.RGBToGrey2Button.Size = new System.Drawing.Size(86, 23);
-            this.RGBToGrey2Button.TabIndex = 3;
-            this.RGBToGrey2Button.Text = "RGB to Grey 2";
-            this.RGBToGrey2Button.UseVisualStyleBackColor = true;
-            this.RGBToGrey2Button.Click += new System.EventHandler(this.RGBToGrey2Button_Click);
+            this.pictureBox_Gray2Gist.Location = new System.Drawing.Point(827, 324);
+            this.pictureBox_Gray2Gist.Name = "pictureBox_Gray2Gist";
+            this.pictureBox_Gray2Gist.Size = new System.Drawing.Size(336, 255);
+            this.pictureBox_Gray2Gist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Gray2Gist.TabIndex = 7;
+            this.pictureBox_Gray2Gist.TabStop = false;
             // 
-            // button1
+            // pictureBox_Difference
             // 
-            this.button1.Location = new System.Drawing.Point(1273, 351);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button_Difference);
+            this.pictureBox_Difference.Location = new System.Drawing.Point(600, 629);
+            this.pictureBox_Difference.Name = "pictureBox_Difference";
+            this.pictureBox_Difference.Size = new System.Drawing.Size(336, 255);
+            this.pictureBox_Difference.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Difference.TabIndex = 8;
+            this.pictureBox_Difference.TabStop = false;
             // 
-            // pictureBox_Gist
+            // pictureBox_OriginImage
             // 
-            this.pictureBox_Gist.Location = new System.Drawing.Point(741, 12);
-            this.pictureBox_Gist.Name = "pictureBox_Gist";
-            this.pictureBox_Gist.Size = new System.Drawing.Size(512, 620);
-            this.pictureBox_Gist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_Gist.TabIndex = 5;
-            this.pictureBox_Gist.TabStop = false;
+            this.pictureBox_OriginImage.Image = global::ImageGrayWF.Properties.Resources.ФРУКТЫ;
+            this.pictureBox_OriginImage.Location = new System.Drawing.Point(12, 249);
+            this.pictureBox_OriginImage.Name = "pictureBox_OriginImage";
+            this.pictureBox_OriginImage.Size = new System.Drawing.Size(336, 255);
+            this.pictureBox_OriginImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_OriginImage.TabIndex = 9;
+            this.pictureBox_OriginImage.TabStop = false;
+            // 
+            // label_OriginImage
+            // 
+            this.label_OriginImage.AutoSize = true;
+            this.label_OriginImage.Location = new System.Drawing.Point(111, 233);
+            this.label_OriginImage.Name = "label_OriginImage";
+            this.label_OriginImage.Size = new System.Drawing.Size(130, 13);
+            this.label_OriginImage.TabIndex = 10;
+            this.label_OriginImage.Text = "Оригинальная картинка";
+            // 
+            // label_Gray1
+            // 
+            this.label_Gray1.AutoSize = true;
+            this.label_Gray1.Location = new System.Drawing.Point(407, 26);
+            this.label_Gray1.Name = "label_Gray1";
+            this.label_Gray1.Size = new System.Drawing.Size(298, 13);
+            this.label_Gray1.TabIndex = 11;
+            this.label_Gray1.Text = "После преобразования в черно-белый первым способом";
+            // 
+            // label_Gray1Gist
+            // 
+            this.label_Gray1Gist.AutoSize = true;
+            this.label_Gray1Gist.Location = new System.Drawing.Point(854, 26);
+            this.label_Gray1Gist.Name = "label_Gray1Gist";
+            this.label_Gray1Gist.Size = new System.Drawing.Size(283, 13);
+            this.label_Gray1Gist.TabIndex = 12;
+            this.label_Gray1Gist.Text = "Гистограмма преобразованной картинки, способом 1";
+            // 
+            // label_Gray2
+            // 
+            this.label_Gray2.AutoSize = true;
+            this.label_Gray2.Location = new System.Drawing.Point(407, 308);
+            this.label_Gray2.Name = "label_Gray2";
+            this.label_Gray2.Size = new System.Drawing.Size(297, 13);
+            this.label_Gray2.TabIndex = 13;
+            this.label_Gray2.Text = "После преобразования в черно-белый вторым способом";
+            // 
+            // label_GrayGist
+            // 
+            this.label_GrayGist.AutoSize = true;
+            this.label_GrayGist.Location = new System.Drawing.Point(854, 308);
+            this.label_GrayGist.Name = "label_GrayGist";
+            this.label_GrayGist.Size = new System.Drawing.Size(283, 13);
+            this.label_GrayGist.TabIndex = 14;
+            this.label_GrayGist.Text = "Гистограмма преобразованной картинки, способом 2";
+            // 
+            // label_Difference
+            // 
+            this.label_Difference.AutoSize = true;
+            this.label_Difference.Location = new System.Drawing.Point(663, 613);
+            this.label_Difference.Name = "label_Difference";
+            this.label_Difference.Size = new System.Drawing.Size(199, 13);
+            this.label_Difference.TabIndex = 15;
+            this.label_Difference.Text = "Разность преобразованных картинок";
             // 
             // Form_Ex1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 644);
-            this.Controls.Add(this.pictureBox_Gist);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.RGBToGrey2Button);
-            this.Controls.Add(this.RGBToGrey1Button);
-            this.Controls.Add(this.ResetButton);
-            this.Controls.Add(this.pictureBox_Image);
+            this.ClientSize = new System.Drawing.Size(1335, 925);
+            this.Controls.Add(this.label_Difference);
+            this.Controls.Add(this.label_GrayGist);
+            this.Controls.Add(this.label_Gray2);
+            this.Controls.Add(this.label_Gray1Gist);
+            this.Controls.Add(this.label_Gray1);
+            this.Controls.Add(this.label_OriginImage);
+            this.Controls.Add(this.pictureBox_OriginImage);
+            this.Controls.Add(this.pictureBox_Difference);
+            this.Controls.Add(this.pictureBox_Gray2Gist);
+            this.Controls.Add(this.pictureBox_Gray2);
+            this.Controls.Add(this.pictureBox_Gray1Gist);
+            this.Controls.Add(this.pictureBox_Gray1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "Form_Ex1";
             this.Text = "RGB&HSV";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ex1_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gray1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gray1Gist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gray2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gray2Gist)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Difference)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_OriginImage)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.PictureBox pictureBox_Image;
-		private System.Windows.Forms.Button ResetButton;
-		private System.Windows.Forms.Button RGBToGrey1Button;
-		private System.Windows.Forms.Button RGBToGrey2Button;
-		private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox_Gist;
+		private System.Windows.Forms.PictureBox pictureBox_Gray1;
+        private System.Windows.Forms.PictureBox pictureBox_Gray1Gist;
+        private System.Windows.Forms.PictureBox pictureBox_Gray2;
+        private System.Windows.Forms.PictureBox pictureBox_Gray2Gist;
+        private System.Windows.Forms.PictureBox pictureBox_Difference;
+        private System.Windows.Forms.PictureBox pictureBox_OriginImage;
+        private System.Windows.Forms.Label label_OriginImage;
+        private System.Windows.Forms.Label label_Gray1;
+        private System.Windows.Forms.Label label_Gray1Gist;
+        private System.Windows.Forms.Label label_Gray2;
+        private System.Windows.Forms.Label label_GrayGist;
+        private System.Windows.Forms.Label label_Difference;
     }
 }
 

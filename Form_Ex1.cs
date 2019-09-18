@@ -15,43 +15,27 @@ namespace ImageGrayWF
 	public partial class Form_Ex1 : Form
 	{
         private Form_Main FormMain;
-		private Image OriginalImage;
 		private Bitmap gray1;
 		private Bitmap gray2;
-        private Bitmap EmptyPictureBox;
 		public Form_Ex1(Form_Main form_Main)
 		{
 			InitializeComponent();
+
             FormMain = form_Main;
-			OriginalImage = pictureBox_Image.Image;
-            //Вручную создает картинку во втором picturebox и заливает ее белым
-            pictureBox_Gist.Image = new Bitmap(pictureBox_Gist.Width, pictureBox_Gist.Height);
-            EmptyPictureBox = new Bitmap(pictureBox_Gist.Image);
-           
-            for (int x = 0; x < pictureBox_Gist.Width; x++)
-            {
-                for (int y = 0; y < pictureBox_Gist.Height; y++)
-                {
-                    EmptyPictureBox.SetPixel(x, y, Color.FromArgb(255, 255, 255));
-                }
-            }
-            pictureBox_Gist.Image = EmptyPictureBox;
+
+            RGBToGrey1();
+            RGBToGrey2();
+            DrawDifference();
         }
 
-        //Чтобы не нажимать ресет постоянно
-        private void Reset()
-        {
-            pictureBox_Image.Image = OriginalImage;
-            pictureBox_Gist.Image = EmptyPictureBox;
-        }
 
         //Отрисовка гистограммы
         //Передается только массив 0..256 с количеством пикселей такого оттенка (т.к. R=G=B в оттенках серого)
-        private void DrawGist(int[] gist)
+        private void DrawGist(int[] gist, PictureBox pictureBox)
         {
-            int GistWidth = pictureBox_Gist.Width;
-            int GistHeight = pictureBox_Gist.Height;
-            Bitmap GistImage = new Bitmap(pictureBox_Gist.Image);
+            int GistWidth = pictureBox.Width;
+            int GistHeight = pictureBox.Height;
+            Bitmap GistImage = new Bitmap(GistWidth, GistHeight);
 
             //Выглядит кривовато, но сделано так для того чтоб размер picturebox можно было менять как угодно,
             //до тех пор пока его ширина больше 256
@@ -64,22 +48,17 @@ namespace ImageGrayWF
                     for (int k = 0; k < scaleX; k++)
                     {
                         GistImage.SetPixel((x*(int)scaleX)+k, y, Color.FromArgb(x,x,x));
-                        pictureBox_Gist.Image = GistImage;
+                        pictureBox.Image = GistImage;
                     }
                 }
         }
 
-		private void ResetButton_Click(object sender, EventArgs e)
-		{
-            Reset();
-		}
 
         //Оттенки серого по первой формуле
-		private void RGBToGrey1Button_Click(object sender, EventArgs e)
+		private void RGBToGrey1()
 		{
-            Reset();
             int[] gist = new int[256];
-			Bitmap ImageBitmap = new Bitmap(pictureBox_Image.Image);
+			Bitmap ImageBitmap = new Bitmap(pictureBox_OriginImage.Image);
 			for (int x = 0; x < ImageBitmap.Width; x++)
 			{
 				for (int y = 0; y < ImageBitmap.Height; y++)
@@ -92,16 +71,15 @@ namespace ImageGrayWF
 				}
 			}
 			gray1 = ImageBitmap;
-			pictureBox_Image.Image = ImageBitmap;
-            DrawGist(gist);
+			pictureBox_Gray1.Image = ImageBitmap;
+            DrawGist(gist, pictureBox_Gray1Gist);
 		}
 
         //По второй
-		private void RGBToGrey2Button_Click(object sender, EventArgs e)
+		private void RGBToGrey2()
 		{
-            Reset();
             int[] gist = new int[256];
-			Bitmap ImageBitmap = new Bitmap(pictureBox_Image.Image);
+			Bitmap ImageBitmap = new Bitmap(pictureBox_OriginImage.Image);
 			for (int x = 0; x < ImageBitmap.Width; x++)
 			{
 				for (int y = 0; y < ImageBitmap.Height; y++)
@@ -114,19 +92,13 @@ namespace ImageGrayWF
                 }
 			}
 			gray2 = ImageBitmap;
-			pictureBox_Image.Image = ImageBitmap;
-            DrawGist(gist);
+            pictureBox_Gray2.Image = ImageBitmap;
+            DrawGist(gist, pictureBox_Gray2Gist);
         }
 
-        private void Form_Ex1_FormClosing(object sender, FormClosingEventArgs e)
+        private void DrawDifference()
         {
-            FormMain.Show();
-        }
-
-        private void Button_Difference(object sender, EventArgs e)
-        {
-            Reset();
-            Bitmap DifferenceOfGray_Image = new Bitmap(pictureBox_Image.Image);
+            Bitmap DifferenceOfGray_Image = new Bitmap(pictureBox_OriginImage.Image);
             for (int x = 0; x < DifferenceOfGray_Image.Width; x++)
             {
                 for (int y = 0; y < DifferenceOfGray_Image.Height; y++)
@@ -142,7 +114,12 @@ namespace ImageGrayWF
                     DifferenceOfGray_Image.SetPixel(x, y, Color.FromArgb(color, color, color));
                 }
             }
-            pictureBox_Image.Image = DifferenceOfGray_Image;
+            pictureBox_Difference.Image = DifferenceOfGray_Image;
+        }
+
+        private void Form_Ex1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormMain.Show();
         }
     }
 }
