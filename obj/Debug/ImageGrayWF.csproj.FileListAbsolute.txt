@@ -8,3 +8,13 @@ D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\obj\Debug\Im
 D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\obj\Debug\ImageGrayWF.csproj.CoreCompileInputs.cache
 D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\obj\Debug\ImageGrayWF.exe
 D:\_Documents\Visual Studio 2019\Templates\source\repos\ImageGrayWF\obj\Debug\ImageGrayWF.pdb
+D:\CompGraph_lab2\bin\Debug\ImageGrayWF.exe.config
+D:\CompGraph_lab2\bin\Debug\ImageGrayWF.exe
+D:\CompGraph_lab2\bin\Debug\ImageGrayWF.pdb
+D:\CompGraph_lab2\obj\Debug\ImageGrayWF.csprojAssemblyReference.cache
+D:\CompGraph_lab2\obj\Debug\ImageGrayWF.Form1.resources
+D:\CompGraph_lab2\obj\Debug\ImageGrayWF.Properties.Resources.resources
+D:\CompGraph_lab2\obj\Debug\ImageGrayWF.csproj.GenerateResource.cache
+D:\CompGraph_lab2\obj\Debug\ImageGrayWF.csproj.CoreCompileInputs.cache
+D:\CompGraph_lab2\obj\Debug\ImageGrayWF.exe
+D:\CompGraph_lab2\obj\Debug\ImageGrayWF.pdb

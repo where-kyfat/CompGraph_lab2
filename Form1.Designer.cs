@@ -28,79 +28,93 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-			this.pictureBox = new System.Windows.Forms.PictureBox();
-			this.ResetButton = new System.Windows.Forms.Button();
-			this.RGBToGrey1Button = new System.Windows.Forms.Button();
-			this.RGBToGrey2Button = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// pictureBox
-			// 
-			this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
-			this.pictureBox.Location = new System.Drawing.Point(12, 12);
-			this.pictureBox.Name = "pictureBox";
-			this.pictureBox.Size = new System.Drawing.Size(631, 426);
-			this.pictureBox.TabIndex = 0;
-			this.pictureBox.TabStop = false;
-			// 
-			// ResetButton
-			// 
-			this.ResetButton.Location = new System.Drawing.Point(685, 43);
-			this.ResetButton.Name = "ResetButton";
-			this.ResetButton.Size = new System.Drawing.Size(80, 27);
-			this.ResetButton.TabIndex = 1;
-			this.ResetButton.Text = "Reset";
-			this.ResetButton.UseVisualStyleBackColor = true;
-			this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
-			// 
-			// RGBToGrey1Button
-			// 
-			this.RGBToGrey1Button.Location = new System.Drawing.Point(679, 272);
-			this.RGBToGrey1Button.Name = "RGBToGrey1Button";
-			this.RGBToGrey1Button.Size = new System.Drawing.Size(86, 23);
-			this.RGBToGrey1Button.TabIndex = 2;
-			this.RGBToGrey1Button.Text = "RGB to Grey1";
-			this.RGBToGrey1Button.UseVisualStyleBackColor = true;
-			this.RGBToGrey1Button.Click += new System.EventHandler(this.RGBToGrey1Button_Click);
-			// 
-			// RGBToGrey2Button
-			// 
-			this.RGBToGrey2Button.Location = new System.Drawing.Point(679, 311);
-			this.RGBToGrey2Button.Name = "RGBToGrey2Button";
-			this.RGBToGrey2Button.Size = new System.Drawing.Size(86, 23);
-			this.RGBToGrey2Button.TabIndex = 3;
-			this.RGBToGrey2Button.Text = "RGB to Grey 2";
-			this.RGBToGrey2Button.UseVisualStyleBackColor = true;
-			this.RGBToGrey2Button.Click += new System.EventHandler(this.RGBToGrey2Button_Click);
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(679, 350);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(86, 23);
-			this.button1.TabIndex = 4;
-			this.button1.Text = "button1";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.Button1_Click);
-			// 
-			// Form1
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.button1);
-			this.Controls.Add(this.RGBToGrey2Button);
-			this.Controls.Add(this.RGBToGrey1Button);
-			this.Controls.Add(this.ResetButton);
-			this.Controls.Add(this.pictureBox);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			this.Name = "Form1";
-			this.Text = "RGB&HSV";
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-			this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.ResetButton = new System.Windows.Forms.Button();
+            this.RGBToGrey1Button = new System.Windows.Forms.Button();
+            this.RGBToGrey2Button = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
+            this.pictureBox.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(546, 620);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 0;
+            this.pictureBox.TabStop = false;
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.Location = new System.Drawing.Point(1088, 29);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(80, 27);
+            this.ResetButton.TabIndex = 1;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            // 
+            // RGBToGrey1Button
+            // 
+            this.RGBToGrey1Button.Location = new System.Drawing.Point(1082, 258);
+            this.RGBToGrey1Button.Name = "RGBToGrey1Button";
+            this.RGBToGrey1Button.Size = new System.Drawing.Size(86, 23);
+            this.RGBToGrey1Button.TabIndex = 2;
+            this.RGBToGrey1Button.Text = "RGB to Grey1";
+            this.RGBToGrey1Button.UseVisualStyleBackColor = true;
+            this.RGBToGrey1Button.Click += new System.EventHandler(this.RGBToGrey1Button_Click);
+            // 
+            // RGBToGrey2Button
+            // 
+            this.RGBToGrey2Button.Location = new System.Drawing.Point(1082, 297);
+            this.RGBToGrey2Button.Name = "RGBToGrey2Button";
+            this.RGBToGrey2Button.Size = new System.Drawing.Size(86, 23);
+            this.RGBToGrey2Button.TabIndex = 3;
+            this.RGBToGrey2Button.Text = "RGB to Grey 2";
+            this.RGBToGrey2Button.UseVisualStyleBackColor = true;
+            this.RGBToGrey2Button.Click += new System.EventHandler(this.RGBToGrey2Button_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1082, 336);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(564, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(512, 620);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1180, 644);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.RGBToGrey2Button);
+            this.Controls.Add(this.RGBToGrey1Button);
+            this.Controls.Add(this.ResetButton);
+            this.Controls.Add(this.pictureBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "Form1";
+            this.Text = "RGB&HSV";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
 
 		}
 
@@ -111,6 +125,7 @@
 		private System.Windows.Forms.Button RGBToGrey1Button;
 		private System.Windows.Forms.Button RGBToGrey2Button;
 		private System.Windows.Forms.Button button1;
-	}
+        private System.Windows.Forms.PictureBox pictureBox1;
+    }
 }
 
