@@ -1,6 +1,6 @@
 ﻿namespace ImageGrayWF
 {
-	partial class Form1
+	partial class Form_Ex1
 	{
 		/// <summary>
 		/// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Ex1));
             this.pictureBox_Image = new System.Windows.Forms.PictureBox();
             this.ResetButton = new System.Windows.Forms.Button();
             this.RGBToGrey1Button = new System.Windows.Forms.Button();
@@ -87,7 +87,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button_Difference);
             // 
             // pictureBox_Gist
             // 
@@ -98,7 +98,7 @@
             this.pictureBox_Gist.TabIndex = 5;
             this.pictureBox_Gist.TabStop = false;
             // 
-            // Form1
+            // Form_Ex1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,8 +110,9 @@
             this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.pictureBox_Image);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Form1";
+            this.Name = "Form_Ex1";
             this.Text = "RGB&HSV";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ex1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gist)).EndInit();
             this.ResumeLayout(false);

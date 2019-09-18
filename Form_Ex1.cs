@@ -12,16 +12,18 @@ using System.Drawing.Imaging;
 
 namespace ImageGrayWF
 {
-	public partial class Form1 : Form
+	public partial class Form_Ex1 : Form
 	{
-		private Image image1;
+        private Form_Main FormMain;
+		private Image OriginalImage;
 		private Bitmap gray1;
 		private Bitmap gray2;
         private Bitmap EmptyPictureBox;
-		public Form1()
+		public Form_Ex1(Form_Main form_Main)
 		{
 			InitializeComponent();
-			image1 = pictureBox_Image.Image;
+            FormMain = form_Main;
+			OriginalImage = pictureBox_Image.Image;
             //Вручную создает картинку во втором picturebox и заливает ее белым
             pictureBox_Gist.Image = new Bitmap(pictureBox_Gist.Width, pictureBox_Gist.Height);
             EmptyPictureBox = new Bitmap(pictureBox_Gist.Image);
@@ -39,7 +41,7 @@ namespace ImageGrayWF
         //Чтобы не нажимать ресет постоянно
         private void Reset()
         {
-            pictureBox_Image.Image = image1;
+            pictureBox_Image.Image = OriginalImage;
             pictureBox_Gist.Image = EmptyPictureBox;
         }
 
@@ -116,26 +118,31 @@ namespace ImageGrayWF
             DrawGist(gist);
         }
 
-		private void Button1_Click(object sender, EventArgs e)
-		{
+        private void Form_Ex1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormMain.Show();
+        }
+
+        private void Button_Difference(object sender, EventArgs e)
+        {
             Reset();
-			Bitmap DifferenceOfGray_Image = new Bitmap(pictureBox_Image.Image);
-			for (int x = 0; x < DifferenceOfGray_Image.Width; x++)
-			{
-				for (int y = 0; y < DifferenceOfGray_Image.Height; y++)
-				{
-					Color Gray1Color = gray1.GetPixel(x, y);
-					Color Gray2Color = gray2.GetPixel(x, y);
+            Bitmap DifferenceOfGray_Image = new Bitmap(pictureBox_Image.Image);
+            for (int x = 0; x < DifferenceOfGray_Image.Width; x++)
+            {
+                for (int y = 0; y < DifferenceOfGray_Image.Height; y++)
+                {
+                    Color Gray1Color = gray1.GetPixel(x, y);
+                    Color Gray2Color = gray2.GetPixel(x, y);
                     int color = Gray1Color.R;
-                    if (Gray1Color.R != Gray2Color.R) 
+                    if (Gray1Color.R != Gray2Color.R)
                     {
                         color = 255;
                     }
 
                     DifferenceOfGray_Image.SetPixel(x, y, Color.FromArgb(color, color, color));
-				}
-			}
-			pictureBox_Image.Image = DifferenceOfGray_Image;
-		}
+                }
+            }
+            pictureBox_Image.Image = DifferenceOfGray_Image;
+        }
     }
 }
