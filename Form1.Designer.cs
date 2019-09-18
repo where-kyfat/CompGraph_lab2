@@ -29,29 +29,29 @@
 		private void InitializeComponent()
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Image = new System.Windows.Forms.PictureBox();
             this.ResetButton = new System.Windows.Forms.Button();
             this.RGBToGrey1Button = new System.Windows.Forms.Button();
             this.RGBToGrey2Button = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox_Gist = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gist)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox
+            // pictureBox_Image
             // 
-            this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
-            this.pictureBox.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(546, 620);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox.TabIndex = 0;
-            this.pictureBox.TabStop = false;
+            this.pictureBox_Image.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Image.Image")));
+            this.pictureBox_Image.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox_Image.Name = "pictureBox_Image";
+            this.pictureBox_Image.Size = new System.Drawing.Size(668, 620);
+            this.pictureBox_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Image.TabIndex = 0;
+            this.pictureBox_Image.TabStop = false;
             // 
             // ResetButton
             // 
-            this.ResetButton.Location = new System.Drawing.Point(1088, 29);
+            this.ResetButton.Location = new System.Drawing.Point(1273, 28);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(80, 27);
             this.ResetButton.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             // RGBToGrey1Button
             // 
-            this.RGBToGrey1Button.Location = new System.Drawing.Point(1082, 258);
+            this.RGBToGrey1Button.Location = new System.Drawing.Point(1273, 244);
             this.RGBToGrey1Button.Name = "RGBToGrey1Button";
             this.RGBToGrey1Button.Size = new System.Drawing.Size(86, 23);
             this.RGBToGrey1Button.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // RGBToGrey2Button
             // 
-            this.RGBToGrey2Button.Location = new System.Drawing.Point(1082, 297);
+            this.RGBToGrey2Button.Location = new System.Drawing.Point(1273, 292);
             this.RGBToGrey2Button.Name = "RGBToGrey2Button";
             this.RGBToGrey2Button.Size = new System.Drawing.Size(86, 23);
             this.RGBToGrey2Button.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1082, 336);
+            this.button1.Location = new System.Drawing.Point(1273, 351);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 23);
             this.button1.TabIndex = 4;
@@ -89,43 +89,43 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // pictureBox1
+            // pictureBox_Gist
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(564, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(512, 620);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox_Gist.Location = new System.Drawing.Point(741, 12);
+            this.pictureBox_Gist.Name = "pictureBox_Gist";
+            this.pictureBox_Gist.Size = new System.Drawing.Size(512, 620);
+            this.pictureBox_Gist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Gist.TabIndex = 5;
+            this.pictureBox_Gist.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 644);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1440, 644);
+            this.Controls.Add(this.pictureBox_Gist);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.RGBToGrey2Button);
             this.Controls.Add(this.RGBToGrey1Button);
             this.Controls.Add(this.ResetButton);
-            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.pictureBox_Image);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "RGB&HSV";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gist)).EndInit();
             this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.PictureBox pictureBox;
+		private System.Windows.Forms.PictureBox pictureBox_Image;
 		private System.Windows.Forms.Button ResetButton;
 		private System.Windows.Forms.Button RGBToGrey1Button;
 		private System.Windows.Forms.Button RGBToGrey2Button;
 		private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox_Gist;
     }
 }
 

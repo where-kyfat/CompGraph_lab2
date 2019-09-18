@@ -17,55 +17,54 @@ namespace ImageGrayWF
 		private Image image1;
 		private Bitmap gray1;
 		private Bitmap gray2;
-        private Bitmap pb2;
+        private Bitmap EmptyPictureBox;
 		public Form1()
 		{
 			InitializeComponent();
-			image1 = pictureBox.Image;
+			image1 = pictureBox_Image.Image;
             //Вручную создает картинку во втором picturebox и заливает ее белым
-            pictureBox1.Image = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-            pb2 = new Bitmap(pictureBox1.Image);
-
-            for (int x = 0; x < pictureBox1.Width; x++)
+            pictureBox_Gist.Image = new Bitmap(pictureBox_Gist.Width, pictureBox_Gist.Height);
+            EmptyPictureBox = new Bitmap(pictureBox_Gist.Image);
+           
+            for (int x = 0; x < pictureBox_Gist.Width; x++)
             {
-                for (int y = 0; y < pictureBox1.Height; y++)
+                for (int y = 0; y < pictureBox_Gist.Height; y++)
                 {
-                    pb2.SetPixel(x, y, Color.FromArgb(255, 255, 255));
+                    EmptyPictureBox.SetPixel(x, y, Color.FromArgb(255, 255, 255));
                 }
             }
-            pictureBox1.Image = pb2;
+            pictureBox_Gist.Image = EmptyPictureBox;
         }
 
         //Чтобы не нажимать ресет постоянно
         private void Reset()
         {
-            pictureBox.Image = image1;
-            pictureBox1.Image = pb2;
+            pictureBox_Image.Image = image1;
+            pictureBox_Gist.Image = EmptyPictureBox;
         }
 
         //Отрисовка гистограммы
         //Передается только массив 0..256 с количеством пикселей такого оттенка (т.к. R=G=B в оттенках серого)
         private void DrawGist(int[] gist)
         {
-            var w = pictureBox1.Width;
-            var h = pictureBox1.Height;
-            Bitmap im = new Bitmap(pictureBox1.Image);
+            int GistWidth = pictureBox_Gist.Width;
+            int GistHeight = pictureBox_Gist.Height;
+            Bitmap GistImage = new Bitmap(pictureBox_Gist.Image);
 
             //Выглядит кривовато, но сделано так для того чтоб размер picturebox можно было менять как угодно,
             //до тех пор пока его ширина больше 256
-            double scaleX = (double)w / 256;
-            double scaleY = (double)h / gist.Max();
-            for (int i = 0; i < w/scaleX; i++)
-                for (int j = h-1; j > h - (int)(gist[i]*scaleY); j--)
+            double scaleX = GistWidth / 256.0;
+            double scaleY = (double)GistHeight / gist.Max();
+            for (int x = 0; x < GistWidth/scaleX; x++)
+                for (int y = GistHeight-1; y > GistHeight - (int)(gist[x]*scaleY); y--)
                 {
                     //третий цикл нужен для отрисовки столбца нужной ширины
                     for (int k = 0; k < scaleX; k++)
                     {
-                        im.SetPixel((i*(int)scaleX)+k, j, Color.FromArgb(i,i,i));
-                        pictureBox1.Image = im;
+                        GistImage.SetPixel((x*(int)scaleX)+k, y, Color.FromArgb(x,x,x));
+                        pictureBox_Gist.Image = GistImage;
                     }
                 }
-            
         }
 
 		private void ResetButton_Click(object sender, EventArgs e)
@@ -78,7 +77,7 @@ namespace ImageGrayWF
 		{
             Reset();
             int[] gist = new int[256];
-			Bitmap ImageBitmap = new Bitmap(pictureBox.Image);
+			Bitmap ImageBitmap = new Bitmap(pictureBox_Image.Image);
 			for (int x = 0; x < ImageBitmap.Width; x++)
 			{
 				for (int y = 0; y < ImageBitmap.Height; y++)
@@ -91,7 +90,7 @@ namespace ImageGrayWF
 				}
 			}
 			gray1 = ImageBitmap;
-			pictureBox.Image = ImageBitmap;
+			pictureBox_Image.Image = ImageBitmap;
             DrawGist(gist);
 		}
 
@@ -100,7 +99,7 @@ namespace ImageGrayWF
 		{
             Reset();
             int[] gist = new int[256];
-			Bitmap ImageBitmap = new Bitmap(pictureBox.Image);
+			Bitmap ImageBitmap = new Bitmap(pictureBox_Image.Image);
 			for (int x = 0; x < ImageBitmap.Width; x++)
 			{
 				for (int y = 0; y < ImageBitmap.Height; y++)
@@ -113,34 +112,30 @@ namespace ImageGrayWF
                 }
 			}
 			gray2 = ImageBitmap;
-			pictureBox.Image = ImageBitmap;
+			pictureBox_Image.Image = ImageBitmap;
             DrawGist(gist);
         }
 
 		private void Button1_Click(object sender, EventArgs e)
 		{
             Reset();
-			Bitmap ImageBitmap = new Bitmap(pictureBox.Image);
-			for (int x = 0; x < ImageBitmap.Width; x++)
+			Bitmap DifferenceOfGray_Image = new Bitmap(pictureBox_Image.Image);
+			for (int x = 0; x < DifferenceOfGray_Image.Width; x++)
 			{
-				for (int y = 0; y < ImageBitmap.Height; y++)
+				for (int y = 0; y < DifferenceOfGray_Image.Height; y++)
 				{
-					Color bitmapColor1 = gray1.GetPixel(x, y);
-					Color bitmapColor2 = gray2.GetPixel(x, y);
-                    int color1 = bitmapColor1.R;
-					int color2 = bitmapColor1.G;
-                    int color3 = bitmapColor1.B;
-                    if ((bitmapColor1.R != bitmapColor2.R) || (bitmapColor1.G != bitmapColor2.G) || (bitmapColor1.B != bitmapColor2.B))
+					Color Gray1Color = gray1.GetPixel(x, y);
+					Color Gray2Color = gray2.GetPixel(x, y);
+                    int color = Gray1Color.R;
+                    if (Gray1Color.R != Gray2Color.R) 
                     {
-                        color1 = 255;
-                        color2 = 255;
-                        color3 = 255;
+                        color = 255;
                     }
 
-                    ImageBitmap.SetPixel(x, y, Color.FromArgb(color1, color2, color3));
+                    DifferenceOfGray_Image.SetPixel(x, y, Color.FromArgb(color, color, color));
 				}
 			}
-			pictureBox.Image = ImageBitmap;
+			pictureBox_Image.Image = DifferenceOfGray_Image;
 		}
     }
 }

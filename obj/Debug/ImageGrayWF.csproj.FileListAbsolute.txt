@@ -18,3 +18,13 @@ D:\CompGraph_lab2\obj\Debug\ImageGrayWF.csproj.GenerateResource.cache
 D:\CompGraph_lab2\obj\Debug\ImageGrayWF.csproj.CoreCompileInputs.cache
 D:\CompGraph_lab2\obj\Debug\ImageGrayWF.exe
 D:\CompGraph_lab2\obj\Debug\ImageGrayWF.pdb
+D:\User\Документы\GitHub\CompGraph_lab2\bin\Debug\ImageGrayWF.exe.config
+D:\User\Документы\GitHub\CompGraph_lab2\bin\Debug\ImageGrayWF.exe
+D:\User\Документы\GitHub\CompGraph_lab2\bin\Debug\ImageGrayWF.pdb
+D:\User\Документы\GitHub\CompGraph_lab2\obj\Debug\ImageGrayWF.csprojAssemblyReference.cache
+D:\User\Документы\GitHub\CompGraph_lab2\obj\Debug\ImageGrayWF.Form1.resources
+D:\User\Документы\GitHub\CompGraph_lab2\obj\Debug\ImageGrayWF.Properties.Resources.resources
+D:\User\Документы\GitHub\CompGraph_lab2\obj\Debug\ImageGrayWF.csproj.GenerateResource.cache
+D:\User\Документы\GitHub\CompGraph_lab2\obj\Debug\ImageGrayWF.csproj.CoreCompileInputs.cache
+D:\User\Документы\GitHub\CompGraph_lab2\obj\Debug\ImageGrayWF.exe
+D:\User\Документы\GitHub\CompGraph_lab2\obj\Debug\ImageGrayWF.pdb
