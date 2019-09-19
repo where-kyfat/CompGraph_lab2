@@ -177,6 +177,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "Form_Ex1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RGB&HSV";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ex1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gray1)).EndInit();

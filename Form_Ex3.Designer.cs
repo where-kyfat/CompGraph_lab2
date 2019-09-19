@@ -34,6 +34,9 @@
             this.ImagePictureBox = new System.Windows.Forms.PictureBox();
             this.RGBtoHSVButton = new System.Windows.Forms.Button();
             this.SaveImageButton = new System.Windows.Forms.Button();
+            this.labelHue = new System.Windows.Forms.Label();
+            this.SaturatioNlabel = new System.Windows.Forms.Label();
+            this.Brightnesslabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.HueTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SaturationTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrightnessTrackBar)).BeginInit();
@@ -80,7 +83,7 @@
             this.RGBtoHSVButton.Name = "RGBtoHSVButton";
             this.RGBtoHSVButton.Size = new System.Drawing.Size(75, 23);
             this.RGBtoHSVButton.TabIndex = 4;
-            this.RGBtoHSVButton.Text = "button1";
+            this.RGBtoHSVButton.Text = "Draw";
             this.RGBtoHSVButton.UseVisualStyleBackColor = true;
             this.RGBtoHSVButton.Click += new System.EventHandler(this.RGBtoHSVbutton_Click_Click);
             // 
@@ -90,15 +93,45 @@
             this.SaveImageButton.Name = "SaveImageButton";
             this.SaveImageButton.Size = new System.Drawing.Size(75, 23);
             this.SaveImageButton.TabIndex = 5;
-            this.SaveImageButton.Text = "button1";
+            this.SaveImageButton.Text = "Save as";
             this.SaveImageButton.UseVisualStyleBackColor = true;
             this.SaveImageButton.Click += new System.EventHandler(this.SaveImageButton_Click);
+            // 
+            // labelHue
+            // 
+            this.labelHue.AutoSize = true;
+            this.labelHue.Location = new System.Drawing.Point(537, 100);
+            this.labelHue.Name = "labelHue";
+            this.labelHue.Size = new System.Drawing.Size(27, 13);
+            this.labelHue.TabIndex = 6;
+            this.labelHue.Text = "Hue";
+            // 
+            // SaturatioNlabel
+            // 
+            this.SaturatioNlabel.AutoSize = true;
+            this.SaturatioNlabel.Location = new System.Drawing.Point(525, 167);
+            this.SaturatioNlabel.Name = "SaturatioNlabel";
+            this.SaturatioNlabel.Size = new System.Drawing.Size(55, 13);
+            this.SaturatioNlabel.TabIndex = 7;
+            this.SaturatioNlabel.Text = "Saturation";
+            // 
+            // Brightnesslabel
+            // 
+            this.Brightnesslabel.AutoSize = true;
+            this.Brightnesslabel.Location = new System.Drawing.Point(525, 237);
+            this.Brightnesslabel.Name = "Brightnesslabel";
+            this.Brightnesslabel.Size = new System.Drawing.Size(56, 13);
+            this.Brightnesslabel.TabIndex = 8;
+            this.Brightnesslabel.Text = "Brightness";
             // 
             // Form_Ex3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Brightnesslabel);
+            this.Controls.Add(this.SaturatioNlabel);
+            this.Controls.Add(this.labelHue);
             this.Controls.Add(this.SaveImageButton);
             this.Controls.Add(this.RGBtoHSVButton);
             this.Controls.Add(this.ImagePictureBox);
@@ -106,6 +139,7 @@
             this.Controls.Add(this.SaturationTrackBar);
             this.Controls.Add(this.HueTrackBar);
             this.Name = "Form_Ex3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ex3_RGB->HSV";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ex3_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.HueTrackBar)).EndInit();
@@ -125,5 +159,8 @@
         private System.Windows.Forms.PictureBox ImagePictureBox;
         private System.Windows.Forms.Button RGBtoHSVButton;
         private System.Windows.Forms.Button SaveImageButton;
+        private System.Windows.Forms.Label labelHue;
+        private System.Windows.Forms.Label SaturatioNlabel;
+        private System.Windows.Forms.Label Brightnesslabel;
     }
 }

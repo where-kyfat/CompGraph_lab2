@@ -35,31 +35,31 @@
             // 
             // button_OpenForm_Ex1
             // 
-            this.button_OpenForm_Ex1.Location = new System.Drawing.Point(252, 71);
+            this.button_OpenForm_Ex1.Location = new System.Drawing.Point(74, 87);
             this.button_OpenForm_Ex1.Name = "button_OpenForm_Ex1";
             this.button_OpenForm_Ex1.Size = new System.Drawing.Size(75, 23);
             this.button_OpenForm_Ex1.TabIndex = 0;
-            this.button_OpenForm_Ex1.Text = "button1";
+            this.button_OpenForm_Ex1.Text = "Задание 1";
             this.button_OpenForm_Ex1.UseVisualStyleBackColor = true;
             this.button_OpenForm_Ex1.Click += new System.EventHandler(this.Button_OpenForm_Ex1_Click);
             // 
             // button_OpenForm_Ex2
             // 
-            this.button_OpenForm_Ex2.Location = new System.Drawing.Point(252, 145);
+            this.button_OpenForm_Ex2.Location = new System.Drawing.Point(74, 125);
             this.button_OpenForm_Ex2.Name = "button_OpenForm_Ex2";
             this.button_OpenForm_Ex2.Size = new System.Drawing.Size(75, 23);
             this.button_OpenForm_Ex2.TabIndex = 1;
-            this.button_OpenForm_Ex2.Text = "button2";
+            this.button_OpenForm_Ex2.Text = "Задание 2";
             this.button_OpenForm_Ex2.UseVisualStyleBackColor = true;
             this.button_OpenForm_Ex2.Click += new System.EventHandler(this.Button_OpenForm_Ex2_Click);
             // 
             // button_OpenForm_Ex3
             // 
-            this.button_OpenForm_Ex3.Location = new System.Drawing.Point(252, 216);
+            this.button_OpenForm_Ex3.Location = new System.Drawing.Point(74, 163);
             this.button_OpenForm_Ex3.Name = "button_OpenForm_Ex3";
             this.button_OpenForm_Ex3.Size = new System.Drawing.Size(75, 23);
             this.button_OpenForm_Ex3.TabIndex = 2;
-            this.button_OpenForm_Ex3.Text = "button3";
+            this.button_OpenForm_Ex3.Text = "Задание 3";
             this.button_OpenForm_Ex3.UseVisualStyleBackColor = true;
             this.button_OpenForm_Ex3.Click += new System.EventHandler(this.Button_OpenForm_Ex3_Click);
             // 
@@ -67,12 +67,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(238, 266);
             this.Controls.Add(this.button_OpenForm_Ex3);
             this.Controls.Add(this.button_OpenForm_Ex2);
             this.Controls.Add(this.button_OpenForm_Ex1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Main";
-            this.Text = "Form_Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ImageGray";
             this.ResumeLayout(false);
 
         }

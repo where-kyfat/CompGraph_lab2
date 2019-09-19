@@ -95,8 +95,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox_Gist);
             this.Controls.Add(this.pictureBox_Image);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Ex2";
-            this.Text = "Form_Ex2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ex2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Ex2_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Gist)).EndInit();
