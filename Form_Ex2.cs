@@ -70,7 +70,7 @@ namespace ImageGrayWF
                             default:
                                 break;
                         }
-                        
+
                         pictureBox_Gist.Image = GistImage;
                     }
                 }
@@ -109,7 +109,7 @@ namespace ImageGrayWF
                 for (int y = 0; y < ImageBitmap.Height; y++)
                 {
                     Color bitmapColor = ImageBitmap.GetPixel(x, y);
-                    ImageBitmap.SetPixel(x, y, Color.FromArgb(0, bitmapColor.G , 0));
+                    ImageBitmap.SetPixel(x, y, Color.FromArgb(0, bitmapColor.G, 0));
                     ++gist[bitmapColor.G];
                 }
             }
@@ -127,7 +127,7 @@ namespace ImageGrayWF
                 for (int y = 0; y < ImageBitmap.Height; y++)
                 {
                     Color bitmapColor = ImageBitmap.GetPixel(x, y);
-                    ImageBitmap.SetPixel(x, y, Color.FromArgb(0,0,bitmapColor.B));
+                    ImageBitmap.SetPixel(x, y, Color.FromArgb(0, 0, bitmapColor.B));
                     ++gist[bitmapColor.B];
                 }
             }

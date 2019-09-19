@@ -35,9 +35,9 @@
             // 
             // button_OpenForm_Ex1
             // 
-            this.button_OpenForm_Ex1.Location = new System.Drawing.Point(12, 46);
+            this.button_OpenForm_Ex1.Location = new System.Drawing.Point(252, 71);
             this.button_OpenForm_Ex1.Name = "button_OpenForm_Ex1";
-            this.button_OpenForm_Ex1.Size = new System.Drawing.Size(184, 51);
+            this.button_OpenForm_Ex1.Size = new System.Drawing.Size(75, 23);
             this.button_OpenForm_Ex1.TabIndex = 0;
             this.button_OpenForm_Ex1.Text = "button1";
             this.button_OpenForm_Ex1.UseVisualStyleBackColor = true;
@@ -45,9 +45,9 @@
             // 
             // button_OpenForm_Ex2
             // 
-            this.button_OpenForm_Ex2.Location = new System.Drawing.Point(12, 109);
+            this.button_OpenForm_Ex2.Location = new System.Drawing.Point(252, 145);
             this.button_OpenForm_Ex2.Name = "button_OpenForm_Ex2";
-            this.button_OpenForm_Ex2.Size = new System.Drawing.Size(184, 49);
+            this.button_OpenForm_Ex2.Size = new System.Drawing.Size(75, 23);
             this.button_OpenForm_Ex2.TabIndex = 1;
             this.button_OpenForm_Ex2.Text = "button2";
             this.button_OpenForm_Ex2.UseVisualStyleBackColor = true;
@@ -55,9 +55,9 @@
             // 
             // button_OpenForm_Ex3
             // 
-            this.button_OpenForm_Ex3.Location = new System.Drawing.Point(12, 170);
+            this.button_OpenForm_Ex3.Location = new System.Drawing.Point(252, 216);
             this.button_OpenForm_Ex3.Name = "button_OpenForm_Ex3";
-            this.button_OpenForm_Ex3.Size = new System.Drawing.Size(184, 48);
+            this.button_OpenForm_Ex3.Size = new System.Drawing.Size(75, 23);
             this.button_OpenForm_Ex3.TabIndex = 2;
             this.button_OpenForm_Ex3.Text = "button3";
             this.button_OpenForm_Ex3.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(208, 250);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button_OpenForm_Ex3);
             this.Controls.Add(this.button_OpenForm_Ex2);
             this.Controls.Add(this.button_OpenForm_Ex1);
