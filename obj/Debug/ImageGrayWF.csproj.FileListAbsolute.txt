@@ -12,6 +12,7 @@ D:\CompGraph_lab2\bin\Debug\ImageGrayWF.exe.config
 D:\CompGraph_lab2\bin\Debug\ImageGrayWF.exe
 D:\CompGraph_lab2\bin\Debug\ImageGrayWF.pdb
 D:\CompGraph_lab2\obj\Debug\ImageGrayWF.csprojAssemblyReference.cache
+D:\CompGraph_lab2\obj\Debug\ImageGrayWF.Form1.resources
 D:\CompGraph_lab2\obj\Debug\ImageGrayWF.Properties.Resources.resources
 D:\CompGraph_lab2\obj\Debug\ImageGrayWF.csproj.GenerateResource.cache
 D:\CompGraph_lab2\obj\Debug\ImageGrayWF.csproj.CoreCompileInputs.cache
@@ -30,7 +31,3 @@ D:\User\Документы\GitHub\CompGraph_lab2\obj\Debug\ImageGrayWF.Form_Ex1.
 D:\User\Документы\GitHub\CompGraph_lab2\obj\Debug\ImageGrayWF.Form_Main.resources
 D:\User\Документы\GitHub\CompGraph_lab2\obj\Debug\ImageGrayWF.Form_Ex2.resources
 D:\User\Документы\GitHub\CompGraph_lab2\obj\Debug\ImageGrayWF.Form_Ex3.resources
-D:\CompGraph_lab2\obj\Debug\ImageGrayWF.Form_Ex1.resources
-D:\CompGraph_lab2\obj\Debug\ImageGrayWF.Form_Ex2.resources
-D:\CompGraph_lab2\obj\Debug\ImageGrayWF.Form_Ex3.resources
-D:\CompGraph_lab2\obj\Debug\ImageGrayWF.Form_Main.resources
