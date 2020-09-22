@@ -36,7 +36,7 @@
             this.SaveImageButton = new System.Windows.Forms.Button();
             this.labelHue = new System.Windows.Forms.Label();
             this.SaturatioNlabel = new System.Windows.Forms.Label();
-            this.Brightnesslabel = new System.Windows.Forms.Label();
+            this.Valuelabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.HueTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SaturationTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrightnessTrackBar)).BeginInit();
@@ -115,21 +115,21 @@
             this.SaturatioNlabel.TabIndex = 7;
             this.SaturatioNlabel.Text = "Saturation";
             // 
-            // Brightnesslabel
+            // Valuelabel
             // 
-            this.Brightnesslabel.AutoSize = true;
-            this.Brightnesslabel.Location = new System.Drawing.Point(525, 237);
-            this.Brightnesslabel.Name = "Brightnesslabel";
-            this.Brightnesslabel.Size = new System.Drawing.Size(56, 13);
-            this.Brightnesslabel.TabIndex = 8;
-            this.Brightnesslabel.Text = "Brightness";
+            this.Valuelabel.AutoSize = true;
+            this.Valuelabel.Location = new System.Drawing.Point(525, 237);
+            this.Valuelabel.Name = "Valuelabel";
+            this.Valuelabel.Size = new System.Drawing.Size(56, 13);
+            this.Valuelabel.TabIndex = 8;
+            this.Valuelabel.Text = "Brightness";
             // 
             // Form_Ex3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Brightnesslabel);
+            this.Controls.Add(this.Valuelabel);
             this.Controls.Add(this.SaturatioNlabel);
             this.Controls.Add(this.labelHue);
             this.Controls.Add(this.SaveImageButton);
@@ -161,6 +161,6 @@
         private System.Windows.Forms.Button SaveImageButton;
         private System.Windows.Forms.Label labelHue;
         private System.Windows.Forms.Label SaturatioNlabel;
-        private System.Windows.Forms.Label Brightnesslabel;
+        private System.Windows.Forms.Label Valuelabel;
     }
 }

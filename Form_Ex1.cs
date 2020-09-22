@@ -98,24 +98,41 @@ namespace ImageGrayWF
 
         private void DrawDifference()
         {
-            Bitmap DifferenceOfGray_Image = new Bitmap(pictureBox_OriginImage.Image);
-            for (int x = 0; x < DifferenceOfGray_Image.Width; x++)
-            {
-                for (int y = 0; y < DifferenceOfGray_Image.Height; y++)
-                {
-                    Color Gray1Color = gray1.GetPixel(x, y);
-                    Color Gray2Color = gray2.GetPixel(x, y);
-                    int color = Gray1Color.R;
-                    if (Gray1Color.R != Gray2Color.R)
-                    {
-                        color = 255;
-                    }
-
-                    DifferenceOfGray_Image.SetPixel(x, y, Color.FromArgb(color, color, color));
+			int min = 255;
+			Bitmap DifferenceOfGray_Image = new Bitmap(pictureBox_OriginImage.Image);
+			for (int x = 0; x < DifferenceOfGray_Image.Width; x++)
+			{
+				for (int y = 0; y < DifferenceOfGray_Image.Height; y++)
+				{
+					Color Gray1Color = gray1.GetPixel(x, y);
+					Color Gray2Color = gray2.GetPixel(x, y);
+					int color = Gray2Color.R - Gray1Color.R;
+					if (min > color)
+						min = color;
+                    //Осветвление
+                    //if (Gray1Color.R == Gray2Color.R)
+                    //{
+                    //    color = 255;
+                    //}
+                    //DifferenceOfGray_Image.SetPixel(x, y, Color.FromArgb(color, color, color));
                 }
-            }
-            pictureBox_Difference.Image = DifferenceOfGray_Image;
-        }
+			}
+
+			for (int x = 0; x < DifferenceOfGray_Image.Width; x++)
+			{
+				for (int y = 0; y < DifferenceOfGray_Image.Height; y++)
+				{
+					Color Gray1Color = gray1.GetPixel(x, y);
+					Color Gray2Color = gray2.GetPixel(x, y);
+					int color = Gray2Color.R - Gray1Color.R;
+					if (min < 0)
+						color -= min;
+					//color = color < 0 ? color + 255 : color;
+					DifferenceOfGray_Image.SetPixel(x, y, Color.FromArgb(color, color, color));
+				}
+			}
+			pictureBox_Difference.Image = DifferenceOfGray_Image;
+		}
 
         private void Form_Ex1_FormClosing(object sender, FormClosingEventArgs e)
         {

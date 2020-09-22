@@ -42,22 +42,22 @@
             this.pictureBox_Image.Image = global::ImageGrayWF.Properties.Resources.ФРУКТЫ;
             this.pictureBox_Image.Location = new System.Drawing.Point(42, 12);
             this.pictureBox_Image.Name = "pictureBox_Image";
-            this.pictureBox_Image.Size = new System.Drawing.Size(256, 414);
+            this.pictureBox_Image.Size = new System.Drawing.Size(352, 414);
             this.pictureBox_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_Image.TabIndex = 0;
             this.pictureBox_Image.TabStop = false;
             // 
             // pictureBox_Gist
             // 
-            this.pictureBox_Gist.Location = new System.Drawing.Point(355, 12);
+            this.pictureBox_Gist.Location = new System.Drawing.Point(428, 12);
             this.pictureBox_Gist.Name = "pictureBox_Gist";
-            this.pictureBox_Gist.Size = new System.Drawing.Size(256, 414);
+            this.pictureBox_Gist.Size = new System.Drawing.Size(352, 414);
             this.pictureBox_Gist.TabIndex = 0;
             this.pictureBox_Gist.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(671, 96);
+            this.button1.Location = new System.Drawing.Point(807, 95);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 48);
             this.button1.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(671, 182);
+            this.button2.Location = new System.Drawing.Point(807, 181);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 48);
             this.button2.TabIndex = 1;
@@ -77,7 +77,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(671, 260);
+            this.button3.Location = new System.Drawing.Point(807, 259);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(107, 48);
             this.button3.TabIndex = 1;
@@ -89,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(964, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
